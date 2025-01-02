@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bcb595d-5d0f-4de7-a54f-cfd2893401af" name="Changes" comment="Подключение БД к проекту &#10;Подключение новых зависимостей&#10;Описание структуры БД&#10;Маппинг сущности в коде на сущность в БД (@Entity)&#10;Создание @Repository&#10;Настройка подключения к БД&#10;Баг-фикс изменения товара(update в БД)&#10;Создание пользовательского именованного запроса (@NamedQueries)&#10;Добавление возможности фильтрации списка товаров на UI">
+    <list default="true" id="4bcb595d-5d0f-4de7-a54f-cfd2893401af" name="Changes" comment="Создал ветку под реализацию авторизации и аутентификации через OAuth">
       <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/config/SecurityBeans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/Scratch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/entity/Authority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/entity/SelmagUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/repository/SelmagUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/security/SelmagUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/db/migration/V24_1_1__Basic_schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/config/SecurityBeans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/security/OAuthClientHttpRequestInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalogue-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/controller/ProductsRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/controller/ProductsRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/resources/application-standalone.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/resources/application-standalone.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/config/ClientBeans.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/config/ClientBeans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/controller/ProductsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/application-standalone.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/application-standalone.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,8 +72,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot Application.CatalogueServiceApplication.executor": "Run",
     "Spring Boot Application.ManagerApplication.executor": "Run",
-    "Spring Boot Application.Scratch.executor": "Run",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "oauth-implementation",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "D:/IntellijIDEA_Project/selMagSpring/selmag-spring/catalogue-service/src/main/java/ag/selm",
@@ -263,13 +259,13 @@
       <option name="project" value="LOCAL" />
       <updated>1733686152496</updated>
     </task>
-    <task id="LOCAL-00003" summary="Подключение БД к проекту &#10;Подключение новых зависимостей&#10;Описание структуры БД&#10;Маппинг сущности в коде на сущность в БД (@Entity)&#10;Создание @Repository&#10;Настройка подключения к БД&#10;Баг-фикс изменения товара(update в БД)&#10;Создание пользовательского именованного запроса (@NamedQueries)&#10;Добавление возможности фильтрации списка товаров на UI">
+    <task id="LOCAL-00003" summary="Создал ветку под реализацию авторизации и аутентификации через OAuth">
       <option name="closed" value="true" />
-      <created>1734299449715</created>
+      <created>1735821037600</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1734299449715</updated>
+      <updated>1735821037600</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
@@ -277,7 +273,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Настроил зависимости приложения&#10;Создал архитектуру приложения &#10;Создал главную страницу&#10;Создал страницу списка товаров&#10;Создал страницу создания товара" />
     <MESSAGE value="Разделение приложения на Web приложение и RestApi. &#10;Создан новый модуль catalogue-service.&#10;Перенос сервиса и репозитория из модуля manager-app в catalogue-service.&#10;Созданы два Rest controller для списка товаров и для отдельного товара. &#10;Создан обработчик исключений для контроллеров.&#10;Протестил RestApi через Postman.&#10;Реализован клиента RestApi на стороне модуля manager-app с помощью RestClient. &#10;Рефакторинг кода в модуле manager-app.&#10;Зарегестрирован компонент в контексте приложения.&#10;Удалена валидация из manager-app, валидация интегрирована в catalogue-service." />
-    <MESSAGE value="Подключение БД к проекту &#10;Подключение новых зависимостей&#10;Описание структуры БД&#10;Маппинг сущности в коде на сущность в БД (@Entity)&#10;Создание @Repository&#10;Настройка подключения к БД&#10;Баг-фикс изменения товара(update в БД)&#10;Создание пользовательского именованного запроса (@NamedQueries)&#10;Добавление возможности фильтрации списка товаров на UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Подключение БД к проекту &#10;Подключение новых зависимостей&#10;Описание структуры БД&#10;Маппинг сущности в коде на сущность в БД (@Entity)&#10;Создание @Repository&#10;Настройка подключения к БД&#10;Баг-фикс изменения товара(update в БД)&#10;Создание пользовательского именованного запроса (@NamedQueries)&#10;Добавление возможности фильтрации списка товаров на UI" />
+    <MESSAGE value="Создал ветку под реализацию авторизации и аутентификации через OAuth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создал ветку под реализацию авторизации и аутентификации через OAuth" />
   </component>
 </project>
