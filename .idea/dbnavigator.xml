@@ -27,11 +27,7 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="fa54cafc-ff0a-4999-bbc3-b159ccf5c261" object-ref="schemas/user_management/tables/t_authority" />
-      <object connection-id="fa54cafc-ff0a-4999-bbc3-b159ccf5c261" object-ref="schemas/user_management/tables/t_user" />
-      <object connection-id="fa54cafc-ff0a-4999-bbc3-b159ccf5c261" object-ref="schemas/user_management/tables/t_user_authority" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="7aff9527-d0a8-4a40-b993-13eb68c363b1" />
