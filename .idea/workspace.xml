@@ -4,44 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bcb595d-5d0f-4de7-a54f-cfd2893401af" name="Changes" comment="Настройка аутентификации и авторизации в приложении с помощью OAuth2 и keycloak.(Получение информации о пользователе из keycloak)&#10;-Настройка аутентификации клиента в web приложение при помощи keycloak-&#10;&#10;Подключение зависимости spring-boot-starter-oauth2-client&#10;Создание контейнера в docker с keycloak&#10;Настройка realm приложения в keycloak (добавление: групп, ролей, пользователей, клиента, скоупов под клиента)&#10;Настройка взаимодействия spring-security с клиентом keycloak&#10;Конфигурация контекста безопасности в application-standalone.yaml&#10;Реализация класса конфигурации для настройки контекста безопасности (ClientBeans)&#10;Реализация компонента для преобразования списка прав пользователя (SecurityBeans)&#10;&#10;-Настройка взаимодействия с серверами ресурсов с помощью OAuth(межсервисное взаимодействие между manager-app и catalogue-service-&#10;&#10;Подключение зависимости spring-boot-starter-oauth2-resource-server&#10;Конфигурация контекста безопасности в application-standalone.yaml&#10;Реализация компонента для интеграции сервиса catalogue с OAuth (SecurityBeans)&#10;Настройка ClientBeans для передачи информации об аутентифицированном пользователе&#10;Реализация интерсептора для OAuth ( OAuthClientHttpRequestInterceptor)">
-      <change afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/CatalogueServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/config/SecurityBeans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/controller/BadRequestControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/controller/ProductRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/controller/ProductsRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/controller/payload/NewProductPayload.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/controller/payload/UpdateProductPayload.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/resources/application-standalone.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/resources/db/migration/V24_1_1__Basic_schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/resources/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/client/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/client/ProductsRestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/client/RestClientProductsRestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/config/ClientBeans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/config/SecurityBeans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/security/OAuthClientHttpRequestInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/application-standalone.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4bcb595d-5d0f-4de7-a54f-cfd2893401af" name="Changes" comment="s">
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/test/java/ag/selm/catalogue/config/TestingBeans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/test/java/ag/selm/catalogue/controller/ProductsRestControllerIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/test/resources/sql/products.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/test/java/ag/selm/manager/config/TestingBeans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/test/java/ag/selm/manager/controller/ProductsControllerIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/test/java/ag/selm/manager/controller/ProductsControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/controller/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/controller/payload/NewProductPayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/controller/payload/NewProductPayload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/controller/payload/UpdateProductPayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/controller/payload/UpdateProductPayload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/repository/InMemoryProductRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/repository/ProductRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/service/DefaultProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/service/DefaultProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/ag/selm/manager/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/ag/selm/catalogue/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/catalogue/products/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/catalogue/products/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,14 +27,16 @@
       <list>
         <option value="Interface" />
         <option value="Record" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleModuleStateConfig" initialized="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -77,6 +53,13 @@
   "keyToString": {
     "Application.ManagerApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.ProductsControllerIT.getNewProductPage_ReturnsProductPage.executor": "Run",
+    "JUnit.ProductsControllerTest.createProduct_RequestIsInvalid_ReturnsProductFormWithErrors.executor": "Run",
+    "JUnit.ProductsControllerTest.createProduct_RequestIsValid_ReturnsRedirectionToProductPage.executor": "Coverage",
+    "JUnit.ProductsControllerTest.executor": "Coverage",
+    "JUnit.ProductsRestControllerIT.createProduct_RequestIsInvalid_ReturnsProblemDetail.executor": "Run",
+    "JUnit.ProductsRestControllerIT.createProduct_RequestIsValid_ReturnsNewProduct.executor": "Run",
+    "JUnit.ProductsRestControllerIT.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.manager-app [clean,package,install].executor": "Run",
     "Maven.manager-app [org.springframework.boot:spring-boot-maven-plugin:3.2.2:run].executor": "Run",
@@ -86,14 +69,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "Spring Boot Application.CatalogueServiceApplication.executor": "Run",
+    "Spring Boot Application.ManagerApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/IntellijIDEA_Project/selMagSpring/selmag-spring/manager-app/src/main/resources/templates/catalogue/products",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.35172415",
-    "settings.editor.selected.configurable": "File.Encoding"
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -108,24 +95,111 @@
       <recent name="D:\IntellijIDEA_Project\selMagSpring\selmag-spring\manager-app\src\main\resources\templates\" />
       <recent name="D:\IntellijIDEA_Project\selMagSpring\selmag-spring\manager-app\src\main\resources\templates\catalogue\" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ag.selm.manager.controller" />
       <recent name="ag.selm.manager.service" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ag.selm.catalogue.controller" />
+      <recent name="ag.selm.manager.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ag.selm.manager.controller.payload" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="ManagerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ProductsRestControllerIT.createProduct_UserIsNotAuthorized_ReturnsForbidden">
+    <configuration name="CatalogueServiceApplication" type="AmplicodeSpringBootApplication" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ag.selm.catalogue.CatalogueServiceApplication" />
+      <module name="catalogue-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerApplication" type="AmplicodeSpringBootApplication" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ag.selm.manager.ManagerApplication" />
+      <module name="manager-app" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsControllerIT.getNewProductPage_ReturnsProductPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="manager-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ag.selm.manager.*" />
+          <option name="PATTERN" value="ag.selm.manager.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ag.selm.manager.controller" />
+      <option name="MAIN_CLASS_NAME" value="ag.selm.manager.controller.ProductsControllerIT" />
+      <option name="METHOD_NAME" value="getNewProductPage_ReturnsProductPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsRestControllerIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalogue-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ag.selm.catalogue.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ag.selm.catalogue.controller" />
+      <option name="MAIN_CLASS_NAME" value="ag.selm.catalogue.controller.ProductsRestControllerIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsRestControllerIT.createProduct_RequestIsInvalid_ReturnsProblemDetail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalogue-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ag.selm.catalogue.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ag.selm.catalogue.controller" />
+      <option name="MAIN_CLASS_NAME" value="ag.selm.catalogue.controller.ProductsRestControllerIT" />
+      <option name="METHOD_NAME" value="createProduct_RequestIsInvalid_ReturnsProblemDetail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsRestControllerIT.createProduct_RequestIsValid_ReturnsNewProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalogue-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ag.selm.catalogue.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ag.selm.catalogue.controller" />
+      <option name="MAIN_CLASS_NAME" value="ag.selm.catalogue.controller.ProductsRestControllerIT" />
+      <option name="METHOD_NAME" value="createProduct_RequestIsValid_ReturnsNewProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsRestControllerIT.createProduct_UserIsNotAuthorized_ReturnsForbidden" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="catalogue-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ag.selm.catalogue.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ag.selm.catalogue.controller" />
+      <option name="MAIN_CLASS_NAME" value="ag.selm.catalogue.controller.ProductsRestControllerIT" />
+      <option name="METHOD_NAME" value="createProduct_UserIsNotAuthorized_ReturnsForbidden" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,7 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ManagerApplication" />
+        <item itemvalue="JUnit.ProductsRestControllerIT.createProduct_UserIsNotAuthorized_ReturnsForbidden" />
+        <item itemvalue="JUnit.ProductsRestControllerIT.createProduct_RequestIsInvalid_ReturnsProblemDetail" />
+        <item itemvalue="JUnit.ProductsRestControllerIT.createProduct_RequestIsValid_ReturnsNewProduct" />
+        <item itemvalue="JUnit.ProductsRestControllerIT" />
+        <item itemvalue="JUnit.ProductsControllerIT.getNewProductPage_ReturnsProductPage" />
       </list>
     </recent_temporary>
   </component>
@@ -179,5 +257,13 @@
     <MESSAGE value="Настроил зависимости приложения&#10;Создал архитектуру приложения &#10;Создал главную страницу&#10;Создал страницу списка товаров&#10;Создал страницу создания товара" />
     <MESSAGE value="Настройка аутентификации и авторизации в приложении с помощью OAuth2 и keycloak.(Получение информации о пользователе из keycloak)&#10;-Настройка аутентификации клиента в web приложение при помощи keycloak-&#10;&#10;Подключение зависимости spring-boot-starter-oauth2-client&#10;Создание контейнера в docker с keycloak&#10;Настройка realm приложения в keycloak (добавление: групп, ролей, пользователей, клиента, скоупов под клиента)&#10;Настройка взаимодействия spring-security с клиентом keycloak&#10;Конфигурация контекста безопасности в application-standalone.yaml&#10;Реализация класса конфигурации для настройки контекста безопасности (ClientBeans)&#10;Реализация компонента для преобразования списка прав пользователя (SecurityBeans)&#10;&#10;-Настройка взаимодействия с серверами ресурсов с помощью OAuth(межсервисное взаимодействие между manager-app и catalogue-service-&#10;&#10;Подключение зависимости spring-boot-starter-oauth2-resource-server&#10;Конфигурация контекста безопасности в application-standalone.yaml&#10;Реализация компонента для интеграции сервиса catalogue с OAuth (SecurityBeans)&#10;Настройка ClientBeans для передачи информации об аутентифицированном пользователе&#10;Реализация интерсептора для OAuth ( OAuthClientHttpRequestInterceptor)" />
     <option name="LAST_COMMIT_MESSAGE" value="Настройка аутентификации и авторизации в приложении с помощью OAuth2 и keycloak.(Получение информации о пользователе из keycloak)&#10;-Настройка аутентификации клиента в web приложение при помощи keycloak-&#10;&#10;Подключение зависимости spring-boot-starter-oauth2-client&#10;Создание контейнера в docker с keycloak&#10;Настройка realm приложения в keycloak (добавление: групп, ролей, пользователей, клиента, скоупов под клиента)&#10;Настройка взаимодействия spring-security с клиентом keycloak&#10;Конфигурация контекста безопасности в application-standalone.yaml&#10;Реализация класса конфигурации для настройки контекста безопасности (ClientBeans)&#10;Реализация компонента для преобразования списка прав пользователя (SecurityBeans)&#10;&#10;-Настройка взаимодействия с серверами ресурсов с помощью OAuth(межсервисное взаимодействие между manager-app и catalogue-service-&#10;&#10;Подключение зависимости spring-boot-starter-oauth2-resource-server&#10;Конфигурация контекста безопасности в application-standalone.yaml&#10;Реализация компонента для интеграции сервиса catalogue с OAuth (SecurityBeans)&#10;Настройка ClientBeans для передачи информации об аутентифицированном пользователе&#10;Реализация интерсептора для OAuth ( OAuthClientHttpRequestInterceptor)" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/selmag_spring$ProductsControllerTest.ic" NAME="ProductsControllerTest Coverage Results" MODIFIED="1736705666933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ag.selm.manager.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/selmag_spring$ProductsControllerTest_createProduct_RequestIsValid_ReturnsRedirectionToProductPage.ic" NAME="ProductsControllerTest.createProduct_RequestIsValid_ReturnsRedirectionToProductPage Coverage Results" MODIFIED="1736705250584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ag.selm.manager.controller.*</FILTER>
+    </SUITE>
   </component>
 </project>
