@@ -50,6 +50,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.wiremock</groupId>
+            <artifactId>wiremock-standalone</artifactId>
+            <version>3.3.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
         </dependency>
@@ -68,6 +74,7 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                    <classifier>exec</classifier>
                 </configuration>
                 <executions>
                     <execution>
