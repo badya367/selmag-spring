@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.CsrfConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
@@ -18,9 +19,9 @@ public class SecurityBeans {
                 .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
                         .requestMatchers(HttpMethod.POST,"/catalogue-api/products")
                         .hasAuthority("SCOPE_edit_catalogue")
-                        .requestMatchers(HttpMethod.PATCH, "/catalogue-api/product/{productId:\\d}")
+                        .requestMatchers(HttpMethod.PATCH, "/catalogue-api/products/{productId:\\d}")
                         .hasAuthority("SCOPE_edit_catalogue")
-                        .requestMatchers(HttpMethod.DELETE, "/catalogue-api/product/{productId:\\d}")
+                        .requestMatchers(HttpMethod.DELETE, "/catalogue-api/products/{productId:\\d}")
                         .hasAuthority("SCOPE_edit_catalogue")
                         .requestMatchers(HttpMethod.GET)
                         .hasAuthority("SCOPE_view_catalogue")

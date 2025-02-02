@@ -24,7 +24,6 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Модульные тесты ProductsController")
 class ProductsControllerTest {
-
     @Mock
     ProductsRestClient productsRestClient;
     @InjectMocks
